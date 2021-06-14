@@ -18,9 +18,24 @@ const items = [
   }
 ]
 
+const options = [
+  {
+    label: 'The Color Red',
+    value: 'red'
+  },
+  {
+    label: 'The Color Green',
+    value: 'green'
+  },
+  {
+    label: 'The Color Blue',
+    value: 'blue'
+  }
+]
+
 const App = () => {
   return (
-    <Dropdown />
+    <Dropdown options={options}/>
   )
 }
 export default App;
