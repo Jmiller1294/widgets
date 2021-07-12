@@ -40,8 +40,37 @@ const App = () => {
 
   return (
     <div>
-      <Translate />
+      {showAccordian()}
+      {showList()}
+      {showDrop()}
+      {showTranslate()}
     </div>
   )
 }
+
+const showAccordian = () => {
+  if(window.location.pathname === '/') {
+    return <Accordion items={items} />;
+  }
+}
+
+const showList = () => {
+  if(window.location.pathname === '/list') {
+    return <Search />;
+  }
+}
+
+const showDrop = () => {
+  if(window.location.pathname === '/dropdown') {
+    return <Dropdown />;
+  }
+}
+
+const showTranslate= () => {
+  if(window.location.pathname === '/translate') {
+    return <Translate />;
+  }
+}
+
+
 export default App;
